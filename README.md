@@ -26,7 +26,7 @@ The application also includes a read-only database connection as a security laye
 
 The main interface uses a chat layout. You type a question, the system processes it, and the response appears as a chart followed by the data table. A collapsible panel beneath each response shows the exact SQL query that Gemini generated, which is useful for learning, auditing, or adapting the query manually.
 
-![Top 10 product categories by total revenue](screenshots/revenue_by_category.png)
+![Top 10 product categories by total revenue](https://raw.githubusercontent.com/najeebullahii/FinQuery-Natural-Language-Analytics-Ecommerce/main/screenshots/revenue_by_category.png)
 
 *The chart above was produced by asking "What are the top 10 product categories by total revenue?" — the system joined four tables and aggregated pricing data across 112,650 order line items.*
 
