@@ -17,12 +17,9 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 # this runs automatically on Streamlit Cloud on first launch
 # so the database is built from the CSV files without needing to upload olist.db
 if not os.path.exists(DB_PATH):
-    import subprocess
-    setup_path = os.path.join(BASE_DIR, "src", "database_setup.py")
-    st.info("Building database for the first time. This takes about 60 seconds...")
-    subprocess.run(["python", setup_path], check=True)
+    st.info("Building database for the first time. Please wait about 60 seconds...")
+    exec(open(os.path.join(BASE_DIR, "src", "database_setup.py")).read())
     st.rerun()
-
 SCHEMA = """
 You are an expert Data Analyst working with the Olist E-commerce SQLite database.
 Your only job is to convert natural language questions into valid SQLite queries.
