@@ -207,5 +207,3 @@ A deployed version of this application is available on Streamlit Community Cloud
 
 [Launch FinQuery](YOUR_STREAMLIT_URL_HERE)
 ```
-
----
