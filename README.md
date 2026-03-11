@@ -205,5 +205,5 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 A deployed version of this application is available on Streamlit Community Cloud:
 
-[Launch FinQuery](YOUR_STREAMLIT_URL_HERE)
+[Launch FinQuery](https://finquery-natural-language-analytics-ecommerce-bzogrhfvcqxkedqz.streamlit.app)
 ```
