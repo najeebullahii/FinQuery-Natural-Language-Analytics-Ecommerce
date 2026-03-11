@@ -1,8 +1,7 @@
-streamlit==1.41.0
+streamlit
 pandas
 plotly
 python-dotenv
 google-genai
 sqlalchemy
 openpyxl
-altair==5.3.0
