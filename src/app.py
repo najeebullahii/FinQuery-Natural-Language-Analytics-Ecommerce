@@ -17,10 +17,11 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 # this runs automatically on Streamlit Cloud on first launch
 # so the database is built from the CSV files without needing to upload olist.db
 if not os.path.exists(DB_PATH):
-    import subprocess
-    setup_path = os.path.join(BASE_DIR, "src", "database_setup.py")
-    st.info("Building database for the first time. This takes about 60 seconds...")
-    subprocess.run(["python", setup_path], check=True)
+    st.info("Building database for the first time. This takes about 60 seconds. Please wait...")
+    import sys
+    sys.path.insert(0, BASE_DIR)
+    from src.database_setup import *
+    build_database()
     st.rerun()
 
 SCHEMA = """
