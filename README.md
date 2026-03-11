@@ -1,6 +1,6 @@
 # FinQuery — Natural Language Analytics for E-Commerce
 
-**Live Demo:** [View the app here](YOUR_STREAMLIT_URL_HERE)
+**Live Demo:** [View the app here](https://finquery-natural-language-analytics-ecommerce-bzogrhfvcqxkedqz.streamlit.app)
 
 ---
 
