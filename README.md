@@ -6,7 +6,7 @@
 
 ## Overview
 
-FinQuery is a business intelligence application that lets anyone ask plain English questions about a real e-commerce database and receive instant, visualized answers — no SQL knowledge required.
+FinQuery is a business intelligence application that lets anyone ask plain English questions about a real e-commerce database and receive instant, visualized answers. No SQL knowledge required.
 
 The problem it solves is simple but common. In most companies, getting answers from a database requires either knowing SQL yourself or waiting for a data analyst to write a query for you. FinQuery removes that barrier entirely. A business user, a product manager, or an executive can type a question like "Which product categories generate the most revenue?" or "Which states have the most customers?" and get a chart and a data table back within seconds.
 
