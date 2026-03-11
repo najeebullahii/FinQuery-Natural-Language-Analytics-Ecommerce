@@ -30,7 +30,7 @@ The main interface uses a chat layout. You type a question, the system processes
 
 *The chart above was produced by asking "What are the top 10 product categories by total revenue?" — the system joined four tables and aggregated pricing data across 112,650 order line items.*
 
-![SQL generation panel](screenshots/sql_generation.png)
+![SQL generation panel](https://raw.githubusercontent.com/najeebullahii/FinQuery-Natural-Language-Analytics-Ecommerce/main/screenshots/sql_generation.png)
 
 *Every response includes the SQL query Gemini wrote to answer the question. The queries are production-quality, using table aliases, proper JOIN conditions, GROUP BY, and ORDER BY clauses.*
 
@@ -42,13 +42,13 @@ The main interface uses a chat layout. You type a question, the system processes
 
 Asking "What is the total revenue per year?" extracts the year from order purchase timestamps and aggregates product prices across all matching order items, revealing year-over-year business growth from 2016 through 2018.
 
-![Total revenue broken down by year](screenshots/revenue_per_year.png)
+![Total revenue broken down by year](https://raw.githubusercontent.com/najeebullahii/FinQuery-Natural-Language-Analytics-Ecommerce/main/screenshots/revenue_per_year.png)
 
 **Customer satisfaction analysis**
 
 Asking "Which 10 product categories have the lowest average review score?" produces a query that joins order items, products, reviews, and category translations in a single statement — the kind of query that takes a junior analyst several minutes to write correctly.
 
-![Bottom 10 categories by average review score](screenshots/lowest_rated_categories.png)
+![Bottom 10 categories by average review score](https://raw.githubusercontent.com/najeebullahii/FinQuery-Natural-Language-Analytics-Ecommerce/main/screenshots/lowest_rated_categories.png)
 
 *Security and services, diapers and hygiene, and office furniture rank as the three lowest rated categories — the kind of insight that directly informs product strategy decisions.*
 
