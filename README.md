@@ -46,11 +46,11 @@ Asking "What is the total revenue per year?" extracts the year from order purcha
 
 **Customer satisfaction analysis**
 
-Asking "Which 10 product categories have the lowest average review score?" produces a query that joins order items, products, reviews, and category translations in a single statement — the kind of query that takes a junior analyst several minutes to write correctly.
+Asking "Which 10 product categories have the lowest average review score?" produces a query that joins order items, products, reviews, and category translations in a single statement the kind of query that takes a junior analyst several minutes to write correctly.
 
 ![Bottom 10 categories by average review score](https://raw.githubusercontent.com/najeebullahii/FinQuery-Natural-Language-Analytics-Ecommerce/main/screenshots/lowest_rated_categories.png)
 
-*Security and services, diapers and hygiene, and office furniture rank as the three lowest rated categories — the kind of insight that directly informs product strategy decisions.*
+*Security and services, diapers and hygiene, and office furniture rank as the three lowest rated categories, the kind of insight that directly informs product strategy decisions.*
 
 ---
 
@@ -84,10 +84,10 @@ The application is structured across four Python files.
 Handles the one-time ingestion of nine CSV files into a local SQLite database. It cleans column names to lowercase, fills null values with appropriate defaults, converts datetime columns to strings for SQLite compatibility, and loads each table using SQLAlchemy. Running this file once builds the entire database from scratch.
 
 **nl_to_sql.py**
-Contains the core AI conversion logic. It constructs a prompt that includes the full database schema — table names, column names, data types, foreign key relationships, and explicit rules — and sends it to the Gemini API along with the user's question. The rules embedded in the schema instruct the model to always join the category translation table, always use SUM of price for revenue calculations, always limit results to 10 rows by default, and never write anything other than SELECT statements. The function strips any markdown formatting from the model's response before returning clean SQL.
+Contains the core AI conversion logic. It constructs a prompt that includes the full database schema table names, column names, data types, foreign key relationships, and explicit rules and sends it to the Gemini API along with the user's question. The rules embedded in the schema instruct the model to always join the category translation table, always use SUM of price for revenue calculations, always limit results to 10 rows by default, and never write anything other than SELECT statements. The function strips any markdown formatting from the model's response before returning clean SQL.
 
 **app.py**
-The Streamlit front end. It manages conversation history using session state so previous questions and answers remain visible as the user continues asking questions. Chart generation is automatic — if the query result contains one text column and one numeric column, it renders a bar chart; if it contains two numeric columns, it renders a scatter plot. The Plotly charts use a consistent colour palette matching the application's design theme. A processing lock prevents the user from submitting multiple requests simultaneously, which would exhaust API quota unnecessarily.
+The Streamlit front end. It manages conversation history using session state so previous questions and answers remain visible as the user continues asking questions. Chart generation is automatic if the query result contains one text column and one numeric column, it renders a bar chart; if it contains two numeric columns, it renders a scatter plot. The Plotly charts use a consistent colour palette matching the application's design theme. A processing lock prevents the user from submitting multiple requests simultaneously, which would exhaust API quota unnecessarily.
 
 **test_gemini.py**
 A standalone script for verifying the Gemini API connection and model availability independently of the full application.
